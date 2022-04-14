@@ -1,0 +1,18 @@
+table:
+  name: users
+  schema: public
+array_relationships:
+- name: commnets
+  using:
+    foreign_key_constraint_on:
+      column: user_id
+      table:
+        name: commnets
+        schema: public
+- name: posts
+  using:
+    foreign_key_constraint_on:
+      column: user_id
+      table:
+        name: posts
+        schema: public
